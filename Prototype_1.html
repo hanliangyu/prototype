@@ -77,6 +77,38 @@
           <div class="visualization" id="mode2">
             <p style="text-align: center; font-style: bold;">Mode Shape 2 Goes Here</p>
           </div>
+          <div class="quiz" id="quiz1">
+              <h1>Test Quiz</h1>
+            <!--Quiz-->
+              <form id="form1">
+                <!--Question 1-->
+                <h3>Q1</h3>
+                <input type="radio" name="a1" value="50" id="q1a1" required>
+                <label for="q1a1">Answer 1</label>
+                <br>
+                <input type="radio" name="a1" value="0" id="q1a2">
+                <label for="q1a2">Answer 2</label>
+                <br>
+                <input type="radio" name="a1" value="0" id="q1a3">
+                <label for="q1a3">Answer 3</label>
+                <br>
+                <br>
+                <input type="submit" value"Submit">
+              </form>
+              <p id="grade"></p>
+
+              <script>
+                document.getElementById("form1").onsubmit=function() {
+                result = parseInt(document.querySelector('input[name = "a1"]:checked').value);
+                if (result == 0) {
+                  result2 = "Please try again."};
+                if (result == 50) {
+                  result2 = "Correct."};
+                document.getElementById("grade").innerHTML = result2;
+                return false; // required to not refresh the page
+                }
+              </script>
+          </div>
         </div>
       </div>
     </div>
