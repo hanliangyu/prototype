@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Prototype 001</title>
+    <!--Page Info-->
+    <title>Derivation of a Fourier Series</title>
+    <!--css link-->
+    <link rel="stylesheet"
+          href="styles/skeleton.css">
+    <link rel="stylesheet"
+          href="styles/style_aero.css">
+    <!--Required JS resources-->
+    <!--NB: better to have resources before the main body but still works even if they are not-->
+    <script src="scripts/plotly-1.47.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="scripts/numeric/src/numeric.js"></script>
+    <script src="scripts/math.min.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script type="text/javascript" src="scripts/MathJax-master/MathJax.js">
+</script>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <!-- Creating a tab to switch between contents -->
+      <div class="tab-content">
+        <div id="Banner">
+            <h1 style="font-style: bold; font-size: 40px; text-align: center;">Vibration Exercise Prototype</h1>
+        </div>
+        <!--Begin Mode Shape Intro-->
+        <div class="tab-pane active" id="maths">
+          <div class="introtext">
+              <h5 style="font-style: bold; font-size: 30px;">Mode Shape:</h5>
+              <p style="font-style: bold; font-size:large">
+                  <!--Basics of Mode Shape-->
+              Lorem ipsum dolor sit amet, ut nam ubique assueverit scribentur. Quo ex ipsum putent facilisis. Modus detracto mea at.
+               Sed ne partem option, ei aeque platonem sed. Purto inermis qui ei. Propriae delicata cu vel, te qui ubique docendi offendit,
+               melius nostrud feugait pri et.</p>
+               <br></br>
+              <h5 style="font-style: bold; font-size: 30px;">Explanation: </h5>
+              <p style="font-style: bold; font-size:large">
+              Lorem ipsum dolor sit amet, ut nam ubique assueverit scribentur. Quo ex ipsum putent facilisis. Modus detracto mea at.
+               Sed ne partem option, ei aeque platonem sed. Purto inermis qui ei. Propriae delicata cu vel, te qui ubique docendi offendit,
+               melius nostrud feugait pri et.</p>
+          </div>
+          <div class="visualization" id="mode1">
+            <p style="text-align: center; font-style: bold;">Mode Shape 1 Goes Here</p>
+          </div>
+
+          <div class="visualization" id="mode2">
+            <p style="text-align: center; font-style: bold;">Mode Shape 2 Goes Here</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
