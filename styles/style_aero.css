@@ -27,7 +27,7 @@ body.no-nav::after{
   background-color: #DBE9EE;
   box-sizing: border-box;
   padding: 10px;
-  text-align: left;
+  text-align: justify;
   width: 100%;
   position: relative;
   top: 20px;
