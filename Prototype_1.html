@@ -89,48 +89,6 @@
 
                 <p>
                   <h5>Table 2.2 </h5>
-          <div class="visualization" id="mode2">
-            <p style="text-align: center; font-style: bold;">Mode Shape 2 Goes Here</p>
-          </div>
-          <div class="quiz" id="quiz1">
-              <h1>Test Quiz</h1>
-            <!--Quiz-->
-              <form id="form1">
-                <!--Question 1-->
-                <h3>Q1</h3>
-                <input type="radio" name="a1" value="50" id="q1a1" required>
-                <label for="q1a1">Answer 1</label>
-                <br>
-                <input type="radio" name="a1" value="0" id="q1a2">
-                <label for="q1a2">Answer 2</label>
-                <br>
-                <input type="radio" name="a1" value="0" id="q1a3">
-                <label for="q1a3">Answer 3</label>
-                <br>
-                <br>
-                <input type="submit" value"Submit">
-              </form>
-              <p id="grade"></p>
-
-              <script>
-                document.getElementById("form1").onsubmit=function() {
-                result = parseInt(document.querySelector('input[name = "a1"]:checked').value);
-                if (result == 0) {
-                  result2 = "Please try again."};
-                if (result == 50) {
-                  result2 = "Correct."};
-                document.getElementById("grade").innerHTML = result2;
-                return false; // required to not refresh the page
-                }
-              </script>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
-</html>
-
                   <table style="width:100%">
                     <style>
                       table, td, th {
@@ -173,7 +131,7 @@
                         <td>(0.07)</td>
                         <td>(0.07)</td>
                       </tr>
-                      
+
                     </table>
                     Table 2.2 - Frequencies and amplitude factors used to obtain the data in Figure B.3. The values you will need
                     to use should be reasonably similar, but most probably not the same.
@@ -228,6 +186,57 @@
                         depending on your data). You can also compare your results to the numerical data in Table D.1
                         and to any other reference experimental data for this setup you can find.
                       </p>
+                      <br></br>
+                      <h5 style="font-style: bold; font-size: 30px;">Explanation: </h5>
+                      <p style="font-style: bold; font-size:large">
+                        Lorem ipsum dolor sit amet, ut nam ubique assueverit scribentur. Quo ex ipsum putent facilisis. Modus detracto mea at.
+                        Sed ne partem option, ei aeque platonem sed. Purto inermis qui ei. Propriae delicata cu vel, te qui ubique docendi offendit,
+                        melius nostrud feugait pri et.</p>
+
+
+          <div class="visualization" id="mode2">
+            <p style="text-align: center; font-style: bold;">Mode Shape 2 Goes Here</p>
+          </div>
+          <div class="quiz" id="quiz1">
+              <h1>Test Quiz</h1>
+            <!--Quiz-->
+              <form id="form1">
+                <!--Question 1-->
+                <h3>Q1</h3>
+                <input type="radio" name="a1" value="50" id="q1a1" required>
+                <label for="q1a1">Answer 1</label>
+                <br>
+                <input type="radio" name="a1" value="0" id="q1a2">
+                <label for="q1a2">Answer 2</label>
+                <br>
+                <input type="radio" name="a1" value="0" id="q1a3">
+                <label for="q1a3">Answer 3</label>
+                <br>
+                <br>
+                <input type="submit" value"Submit">
+              </form>
+              <p id="grade"></p>
+
+              <script>
+                document.getElementById("form1").onsubmit=function() {
+                result = parseInt(document.querySelector('input[name = "a1"]:checked').value);
+                if (result == 0) {
+                  result2 = "Please try again."};
+                if (result == 50) {
+                  result2 = "Correct."};
+                document.getElementById("grade").innerHTML = result2;
+                return false; // required to not refresh the page
+                }
+              </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+                  
                       <br></br>
                       <h5 style="font-style: bold; font-size: 30px;">Explanation: </h5>
                       <p style="font-style: bold; font-size:large">
