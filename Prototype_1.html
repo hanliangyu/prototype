@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <title>Prototype 001</title>
-    <!--Page Info-->
-    <title>Derivation of a Fourier Series</title>
-    <!--css link-->
-    <link rel="stylesheet"
-          href="styles/skeleton.css">
-    <link rel="stylesheet"
-          href="styles/style_aero.css">
-    <!--Required JS resources-->
-    <!--NB: better to have resources before the main body but still works even if they are not-->
-    <script src="scripts/plotly-1.47.4.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="scripts/numeric/src/numeric.js"></script>
-    <script src="scripts/math.min.js"></script>
-<script type="text/x-mathjax-config">
+<head>
+  <title>Prototype 001</title>
+  <!--Page Info-->
+  <title>Derivation of a Fourier Series</title>
+  <!--css link-->
+  <link rel="stylesheet"
+  href="styles/skeleton.css">
+  <link rel="stylesheet"
+  href="styles/style_aero.css">
+  <!--Required JS resources-->
+  <!--NB: better to have resources before the main body but still works even if they are not-->
+  <script src="scripts/plotly-1.47.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="scripts/numeric/src/numeric.js"></script>
+  <script src="scripts/math.min.js"></script>
+  <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
     jax: ["input/TeX", "output/HTML-CSS"],
@@ -29,51 +29,66 @@
 </script>
 <script type="text/javascript" src="scripts/MathJax-master/MathJax.js">
 </script>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 </head>
 <body>
   <div class="container">
-    <div class="row">
-      <!-- Creating a tab to switch between contents -->
-      <div class="tab-content">
-        <div id="Banner">
-            <h1 style="font-style: bold; font-size: 40px; text-align: center;">Vibration Exercise Prototype</h1>
-        </div>
-        <!--Begin Mode Shape Intro-->
-        <div class="tab-pane active" id="maths">
-          <!--Intro Video-->
-          <div class="introtext">
-            <h5 style="font-style: bold; font-size: 30px;">Intro Video:</h5>
-            <p style="font-style: bold; font-size:large">
-                <!--Basics of Mode Shape-->
+    <div class="tab-content">
+      <div id="Banner">
+        <h1 style="font-style: bold; font-size: 40px; text-align: center;">Vibration Exercise Prototype</h1>
+      </div>
+      <!--Begin Mode Shape Intro-->
+      <div class="tab-pane active" id="maths">
+        <!--Intro Video-->
+        <div class="introtext">
+          <h5 style="font-style: bold; font-size: 30px;">Intro Video:</h5>
+          <p style="font-style: bold; font-size:large">
+            <!--Basics of Mode Shape-->
             Lorem ipsum dolor sit amet, ut nam ubique assueverit scribentur. Quo ex ipsum putent facilisis. Modus detracto mea at.
-             Sed ne partem option, ei aeque platonem sed. Purto inermis qui ei. Propriae delicata cu vel, te qui ubique docendi offendit,
-             melius nostrud feugait pri et.</p>
+            Sed ne partem option, ei aeque platonem sed. Purto inermis qui ei. Propriae delicata cu vel, te qui ubique docendi offendit,
+            melius nostrud feugait pri et.
+            $$ f(x)=\sum_{n=-\infty}^{+\infty} c_ne^{in\pi x/L} $$</p>
           </div>
+          <br>
           <div class="intro-video" style="text-align: center;">
             <video width="320" height="240" controls>
               <source src=./video/lab.mp4 type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div class="introtext">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="introtext">
               <h5 style="font-style: bold; font-size: 30px;">Mode Shape:</h5>
               <p style="font-style: bold; font-size:large">
-                  <!--Basics of Mode Shape-->
-              Lorem ipsum dolor sit amet, ut nam ubique assueverit scribentur. Quo ex ipsum putent facilisis. Modus detracto mea at.
-               Sed ne partem option, ei aeque platonem sed. Purto inermis qui ei. Propriae delicata cu vel, te qui ubique docendi offendit,
-               melius nostrud feugait pri et.</p>
-               <br></br>
-              <h5 style="font-style: bold; font-size: 30px;">Explanation: </h5>
-              <p style="font-style: bold; font-size:large">
-              Lorem ipsum dolor sit amet, ut nam ubique assueverit scribentur. Quo ex ipsum putent facilisis. Modus detracto mea at.
-               Sed ne partem option, ei aeque platonem sed. Purto inermis qui ei. Propriae delicata cu vel, te qui ubique docendi offendit,
-               melius nostrud feugait pri et.</p>
-          </div>
-          <div class="visualization" id="mode1">
-            <p style="text-align: center; font-style: bold;">Mode Shape 1 Goes Here</p>
-          </div>
+                <!--Basics of Mode Shape-->
+                <p>
+                  To identify the undamped natural frequency and the corresponding damping ratio, you will
+                  load the structure with a periodic load at a given frequency, measure the response at one point
+                  only (if you are interested, see Appendix A for a demonstration of why this is the case) and
+                  repeat this for a set of frequencies close to the undamped natural frequency you are trying
+                  to determine.The set of frequencies and associated load amplitude factors suggested for the
+                  first mode are summarised in Table 2.2. The frequencies in this table were collected so that
+                  each frequency is close to the corresponding undamped frequency, and the amplitude factors
+                  were determined so that the magnitude of the reading (voltage) is large enough to minimise
+                  the effects of noise while not causing saturation. The load amplitude factor was kept constant
+                  for each mode; this is so that we do not rely on assuming linearity of the load with voltage –
+                  we recommend you do the same.
+                </p>
+                <p>
+                  It is possible that the undamped natural frequency measured changes from year to year, or
+                  even from day to day. This could for instance be due to the experimental setup being moved
+                  in the workshop, to the temperature changing from one group session to the other, etc. Some
+                  factors will affect the actual natural frequencies, and others may simply affect the experimental
+                  errors in the measurement. The implication is that the values in Table 2.2 may need fine-tuning.
+                  You need to verify that you do not get any saturation of the signal (the maximum is 10 V,
+                  so if you get a reading of 10 V, probably the signal is saturated and you need to repeat the
+                  measurement with a slightly lower amplification factor). In addition, you need to verify that
+                  you get a reasonable number of points on either side of the undamped natural frequency (if all measurements are below or above the natural frequency [which you can know by paying
+                  attention to the magnitudes of the accelerations as you collect the data], then you need to do
+                  some further measurements).
+                </p>
 
+                <p>
+                  <h5>Table 2.2 - Frequency (Hz) and (Load amplitude factor (V)) - $1^{st}$ Mode</h5>
           <div class="visualization" id="mode2">
             <p style="text-align: center; font-style: bold;">Mode Shape 2 Goes Here</p>
           </div>
@@ -115,3 +130,158 @@
   </div>
 </body>
 </html>
+
+                  <table style="width:100%">
+                    <style>
+                    td, th {
+                      border: 1px solid #dddddd;
+                      text-align: centre;}
+                      </style>
+
+                      <tr>
+                        <td>17.00</td>
+                        <td>17.25</td>
+                        <td>17.30</td>
+                        <td>17.32</td>
+                        <td>17.34</td>
+                        <td>17.36</td>
+                        <td>17.37</td>
+                        <td>17.38</td>
+                        <td>17.40</td>
+                        <td>17.45</td>
+                        <td>17.60</td>
+                        <td>18.00</td>
+                      </tr>
+                      <tr>
+                        <td>(0.07)</td>
+                        <td>(0.07)</td>
+                        <td>(0.07)</td>
+                        <td>(0.07)</td>
+                        <td>(0.07)</td>
+                        <td>(0.07)</td>
+                        <td>(0.07)</td>
+                        <td>(0.07)</td>
+                        <td>(0.07)</td>
+                        <td>(0.07)</td>
+                        <td>(0.07)</td>
+                        <td>(0.07)</td>
+                      </tr>
+                    </table>
+
+                  </p>
+                  <p>
+                    Before the lab, you can prepare in your log book (or laptop, or tablet, etc) a table with
+                    four columns: ‘applied frequency (Hz)’, ‘applied amplitude factor (V)’, ‘read magnitude (V)’,
+                    ‘read phase (rad)’, and ‘notes’. You can fill in the columns for ‘applied frequency’ and ‘applied
+                    amplification factor’ before the lab; if these need adjustments during the lab, you can then
+                    update them. During the lab, for each reading, write down the magnitude of the response
+                    and the phase you read. It is also a good idea to take a picture of the computer screen as a
+                    precaution. In addition, for each reading, use the ‘notes’ column to write down any observations
+                    that may be relevant for that particular measurement (did you see the support frame vibrating?
+                    did something else happen that could eventually have affected the reading?). You will appreciate
+                    the ‘notes’ column when you later try to interpret your data. During the lab, if you can bring
+                    a laptop and process the data in real time, it will give you an advantage.
+                  </p>
+                  <p>
+                    You can imagine the acceleration as a rotating vector. For each frequency $w$ you apply, the amplitude and phase you read correspond to the magnitude of this acceleration $||\ddot r||$ of this acceleration vector and its phase $\theta_\ddot r$ with respect to the load. From these, you can find the amplitude and phases for the velocity and displacement using (if you are interested, see Appendix B or the respective video in Blackboard for a full derivation):
+                    $$ \left\{
+                      \begin{array}{ll}
+                      ||\dot r ||= \frac{||\ddot r ||}{w} \\
+                      \theta_\dot r = \theta_\ddot r + \frac{\pi}{2} \\
+                      \end{array}
+                      \right. $$
+
+                      $$ \left\{
+                        \begin{array}{ll}
+                        ||r ||= \frac{||\dot r ||}{w} \\
+                        \theta_r = \theta_\dot r + \frac{\pi}{2} \\
+                        \end{array}
+                        \right. $$
+
+                        Once you have measured your data, you can find in Blackboard a spreadsheet where you can conveniently paste
+                        your data, as well as a video showing you how to use the spreadsheet. However, you can also for instance implement
+                        the relevant equations in Matlab and generate your own graphs.
+                        $$ $$
+                        To calculate the undamped natural frequency $w_u$ and the damping ratio $\xi$, you can (in
+                        theory) pick any two frequencies $w_A$ and $w_B$, and then use the phase angle for the velocity at
+                        those frequencies ($\theta_{\dot r_A}$  and $\theta_{\dot r_B}$ respectively):
+                        $$ {w_u}^2 =\frac{{w_A}^2 w_B \tan \left (\theta _{\dot r _B}  \right) - {w_B}^2 w_A \tan \left (\theta _{\dot r _A}  \right)}{w_B \tan \left (\theta _{\dot r _B}  \right) - w_A \tan \left (\theta _{\dot r _A}  \right)} $$
+                        $$ \xi=\frac{1}{2w_u} \cdot \frac{{w_B}^2-{w_A}^2}{w_B \tan \left (\theta _{\dot r _B}  \right) - w_A \tan \left (\theta _{\dot r _A}  \right)}$$
+                      </p>
+                      <p>
+                        If you are interested, see Appendix B or the respective video in Blackboard for a full derivation
+                        of Equations 2.2 and 2.3. In practice, not all pairs of points $w_A$ and $w_B$ are equally good.
+                        Ideally, you want to pick two frequencies $w_A$ and $w_B$ that are as close as possible to the desired
+                        natural frequency $w_u$. These are easy to identify as they correspond to the vicinity of the larger
+                        magnitudes (of acceleration) measured.
+                        The spreadsheet mentioned before contains those equations already (you may need to adjust
+                        the range of various equations and also to select the points A and B that are better suited
+                        depending on your data). You can also compare your results to the numerical data in Table D.1
+                        and to any other reference experimental data for this setup you can find.
+                      </p>
+                      <br></br>
+                      <h5 style="font-style: bold; font-size: 30px;">Explanation: </h5>
+                      <p style="font-style: bold; font-size:large">
+                        Lorem ipsum dolor sit amet, ut nam ubique assueverit scribentur. Quo ex ipsum putent facilisis. Modus detracto mea at.
+                        Sed ne partem option, ei aeque platonem sed. Purto inermis qui ei. Propriae delicata cu vel, te qui ubique docendi offendit,
+                        melius nostrud feugait pri et.</p>
+                      </div>
+                      <br>
+                      <br>
+                      <div class="visualization" id="mode1">
+                        <p style="text-align: center; font-style: bold;">Mode Shape 1 Goes Here</p>
+                      </div>
+
+                      <div class="visualization" id="mode2">
+                        <p style="text-align: center; font-style: bold;">Mode Shape 2 Goes Here</p>
+                      </div>
+                      <div class="quiz" id="quiz1">
+                        <!--Quiz-->
+                        <form id="form1">
+                          <div class="introtext">
+                            <h5 style="font-style: bold; font-size: 30px;">Quiz:</h5>
+                            <!-- scroll bar to select questions -->
+                            <div id="scroll">
+                              <strong>Select Question: </strong>
+                              <select id="Select">
+                                <option value="q1">Question 1</option>
+                                <option value="q2">Question 2</option>
+                                <option value="q3">Question 3</option>
+                              </select>
+                            </div>
+                            <p style="font-style: bold; font-size:large">
+                              Lorem ipsum dolor sit amet, ut nam ubique assueverit scribentur. Quo ex ipsum putent facilisis. Modus detracto mea at.
+                              Sed ne partem option, ei aeque platonem sed. Purto inermis qui ei. Propriae delicata cu vel, te qui ubique docendi offendit,
+                              melius nostrud feugait pri et.</p>
+                              <input type="radio" name="a1" value="50" id="q1a1" required>
+                              <label for="q1a1">Answer 1</label>
+                              <br>
+                              <input type="radio" name="a1" value="0" id="q1a2">
+                              <label for="q1a2">Answer 2</label>
+                              <br>
+                              <input type="radio" name="a1" value="0" id="q1a3">
+                              <label for="q1a3">Answer 3</label>
+                              <br>
+                              <br>
+                              <input type="submit" value"Submit">
+                            </form>
+                            <p id="grade"></p>
+                          </div>
+
+                          <script>
+                          document.getElementById("form1").onsubmit=function() {
+                            result = parseInt(document.querySelector('input[name = "a1"]:checked').value);
+                            if (result == 0) {
+                              result2 = "Please try again. Try the next page for some hints."};
+                              if (result == 50) {
+                                result2 = "Correct."};
+                                document.getElementById("grade").innerHTML = result2;
+                                return false; // required to not refresh the page
+                              }
+                              </script>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </body>
+                    </html>
