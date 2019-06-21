@@ -33,8 +33,6 @@
 </head>
 <body>
   <div class="container">
-    <div class="row">
-      <!-- Creating a tab to switch between contents -->
       <div class="tab-content">
         <div id="Banner">
             <h1 style="font-style: bold; font-size: 40px; text-align: center;">Vibration Exercise Prototype</h1>
@@ -48,8 +46,10 @@
                 <!--Basics of Mode Shape-->
             Lorem ipsum dolor sit amet, ut nam ubique assueverit scribentur. Quo ex ipsum putent facilisis. Modus detracto mea at.
              Sed ne partem option, ei aeque platonem sed. Purto inermis qui ei. Propriae delicata cu vel, te qui ubique docendi offendit,
-             melius nostrud feugait pri et.</p>
+             melius nostrud feugait pri et.
+           $$ f(x)=\sum_{n=-\infty}^{+\infty} c_ne^{in\pi x/L} $$</p>
           </div>
+          <br>
           <div class="intro-video" style="text-align: center;">
             <video width="320" height="240" controls>
               <source src=./video/lab.mp4 type="video/mp4">
@@ -70,6 +70,8 @@
                Sed ne partem option, ei aeque platonem sed. Purto inermis qui ei. Propriae delicata cu vel, te qui ubique docendi offendit,
                melius nostrud feugait pri et.</p>
           </div>
+          <br>
+          <br>
           <div class="visualization" id="mode1">
             <p style="text-align: center; font-style: bold;">Mode Shape 1 Goes Here</p>
           </div>
@@ -77,9 +79,53 @@
           <div class="visualization" id="mode2">
             <p style="text-align: center; font-style: bold;">Mode Shape 2 Goes Here</p>
           </div>
+          <div class="quiz" id="quiz1">
+            <!--Quiz-->
+              <form id="form1">
+                <div class="introtext">
+                <h5 style="font-style: bold; font-size: 30px;">Quiz:</h5>
+                <!-- scroll bar to select questions -->
+                <div id="scroll">
+                    <strong>Select Question: </strong>
+                    <select id="Select">
+                        <option value="q1">Question 1</option>
+                        <option value="q2">Question 2</option>
+                        <option value="q3">Question 3</option>
+                    </select>
+                </div>
+                <p style="font-style: bold; font-size:large">
+                Lorem ipsum dolor sit amet, ut nam ubique assueverit scribentur. Quo ex ipsum putent facilisis. Modus detracto mea at.
+                 Sed ne partem option, ei aeque platonem sed. Purto inermis qui ei. Propriae delicata cu vel, te qui ubique docendi offendit,
+                 melius nostrud feugait pri et.</p>
+                <input type="radio" name="a1" value="50" id="q1a1" required>
+                <label for="q1a1">Answer 1</label>
+                <br>
+                <input type="radio" name="a1" value="0" id="q1a2">
+                <label for="q1a2">Answer 2</label>
+                <br>
+                <input type="radio" name="a1" value="0" id="q1a3">
+                <label for="q1a3">Answer 3</label>
+                <br>
+                <br>
+                <input type="submit" value"Submit">
+              </form>
+              <p id="grade"></p>
+              </div>
+
+              <script>
+                document.getElementById("form1").onsubmit=function() {
+                result = parseInt(document.querySelector('input[name = "a1"]:checked').value);
+                if (result == 0) {
+                  result2 = "Please try again. Try the next page for some hints."};
+                if (result == 50) {
+                  result2 = "Correct."};
+                document.getElementById("grade").innerHTML = result2;
+                return false; // required to not refresh the page
+                }
+              </script>
+          </div>
         </div>
       </div>
-    </div>
   </div>
 </body>
 </html>
