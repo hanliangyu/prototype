@@ -25,6 +25,13 @@ function answer_question2(){
   return false;
 };
 
+function showQ1SolutionButton() {
+  var x = document.getElementById('q1SolutionButton');
+  if (x.style.display === 'none') {
+    x.style.display = 'block';
+  }
+}
+
 
 /* Main Function */
 function main() {
