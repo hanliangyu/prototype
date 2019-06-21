@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Prototype Quiz</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+          processEscapes: true
+        },
+        "HTML-CSS": { fonts: ["TeX"] }
+      });
+    </script>
+    <script type="text/javascript" src="scripts/MathJax-master/MathJax.js">
+    </script>
+
+  </head>
+
+  <body>
+    <!--Title on page -->
+    <div id="header">
+      <h1>Test Quiz</h1>
+    </div>
+    <!--Quiz-->
+    <div id="quiz1">
+      <form id="form1">
+        <!--Question 1-->
+        <div id="quiz1question1">
+            <h3>Question 1</h3>
+            <p>A small satellite is to be launched into orbit using a rocket.
+            A truss structure is used to hold the satellite inside the rocket during launch.
+            The satellite is idealised as a point mass $m$, held by four massless trusses of length $l$ and axial stiffness $EA$, as shown in Figure 1.
+            The stallite has two degrees of freedom, $r_1$ and $r_2$.</p>
+            <img src="protoq1.PNG" alt="Satellite held by four trusses" id="q1figure1" width="400">
+            <br>
+            <label for="q1figure1"><strong>Figure 1: </strong>Satellite ($m$) held by four trusses of length $l$.<label>
+            <p>Using the unit displacement method, find the stiffness matrix</p>
+          <input type="radio" name="a1" value="50" id="q1a1" required>
+          <label for="q1a1"> $\textbf{$K$}= \frac{EA}{l}	\begin{bmatrix}3&0\\0&1\end{bmatrix}$</label>
+          <br>
+          <input type="radio" name="a1" value="0" id="q1a2">
+          <label for="q1a2">$\textbf{$K$}= \frac{EA}{l}	\begin{bmatrix}3&0\\0& -1\end{bmatrix}$</label>
+          <br>
+          <input type="radio" name="a1" value="0" id="q1a3">
+          <label for="q1a3">$\textbf{$K$}= \frac{EA}{l}	\begin{bmatrix}1&0\\0&3\end{bmatrix}$</label>
+          <br>
+          <br>
+          <input type="submit" value"Submit" onclick="showQ1SolutionButton()">
+        </form>
+      <div>
+      <p id="grade"></p>
+      <button onclick="showQ1Solution()" id="q1SolutionButton" style="display:none;">Show solution</button>
+      <script src="scripts/protosolution.js"></script>
+      <div id="q1Solution" style="display:none;">
+        <h3>Solution</h3>
+        <p>Using the unit displacement method:</p>
+        <p>Consider $r_1=1$ and $r_2=0$:</p>
+        <p>The bar forces are:</p>
+        $N_{12}=\frac{EA}{l}, \; N_{13}=\frac{EA}{\sqrt{2}l}, \; N_{14}=-\frac{EA}{\sqrt{2}l}, \; N_{12}=-\frac{EA}{l}$
+        <p>Equilibrium of the horizontal and vertical forces leads to: </p>
+        $R_1=(2+\frac{1}{2}+\frac{1}{2})\frac{EA}{l}=3, \; R_2=0$
+        <p>This is the first column of the stiffness matrix.</p>
+        <p>Now consider $r_1=0$ and $r_2=1$:</p>
+        <p>The bar forces are:</p>
+        $N_12=N_15=0, \; N_13=N_14=-\frac{EA}{\sqrt{2}l}$
+        <p>Equilibrium of the horizontal and vertial forces leads to:</p>
+        $R_1=0, \; R_2=\frac{EA}{l}$
+        <p>This is the second column of the stiffness matrix.</p>
+        <p>Thus, the stiffness matric is:</p>
+        $\textbf{$K$}= \frac{EA}{l}	\begin{bmatrix}3&0\\0&1\end{bmatrix}$
+      </div>
+
+      <script src="scripts/proto.js">  </script>
+    </div>
+  </body>
+
+</html>
