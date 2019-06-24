@@ -1,0 +1,113 @@
+<html lang="en" dir="ltr">
+<head>
+  <title>Quiz</title>
+  <link rel="stylesheet"
+  href="styles/skeleton.css">
+  <link rel="stylesheet"
+  href="styles/style_aero.css">
+  <script src=scripts/prototype.js async></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+  </script>
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
+</script>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+<body>
+  <div class="quiz" id="quiz1">
+    <!--Quiz-->
+    <!-- scroll bar to select questions -->
+    <div class="introtext">
+      <h5 style="font-style: bold; font-size: 30px;">Quiz:</h5>
+      <div class="tab-content">
+        <div id="scroll">
+          <strong>Select Question: </strong>
+          <select id="Select">
+            <option value="q1">Question 1</option>
+            <option value="q2">Question 2</option>
+            <option value="q3">Question 3</option>
+          </select>
+        </div>
+      </div>
+      <div class="derivation" id="q1">
+        <form>
+          <div>
+            <p class="introtext">
+              A small satellite is to be launched into orbit using a rocket.
+              A truss structure is used to hold the satellite inside the rocket during launch.
+              The satellite is idealised as a point mass $m$, held by four massless trusses of length $l$ and axial stiffness $EA$, as shown in Figure 1.
+              The stallite has two degrees of freedom, $r_1$ and $r_2$.</p>
+              <div id="image1" style="text-align: center">
+                <img src="protoq1.PNG" alt="Satellite held by four trusses" id="q1figure1" width="400" style="text-align: center">
+              </div>
+              <br>
+              <label for="q1figure1"><strong>Figure 1: </strong>Satellite ($m$) held by four trusses of length $l$.<label>
+                <p class="introtext">Using the unit displacement method, find the stiffness matrix</p>
+                <!-- Answer Options -->
+                <input type="radio" name="a1" value="50" id="q1a1" required>
+                <label for="q1a1"> $\textbf{$K$}= \frac{EA}{l}	\begin{bmatrix}3&0\\0&1\end{bmatrix}$</label>
+                <br>
+                <input type="radio" name="a1" value="0" id="q1a2">
+                <label for="q1a2">$\textbf{$K$}= \frac{EA}{l}	\begin{bmatrix}3&0\\0& -1\end{bmatrix}$</label>
+                <br>
+                <input type="radio" name="a1" value="0" id="q1a3">
+                <label for="q1a3">$\textbf{$K$}= \frac{EA}{l}	\begin{bmatrix}1&0\\0&3\end{bmatrix}$</label>
+                <br>
+                <br>
+                <input type="submit" id="sub0" value"Submit" onclick="showQ1SolutionButton()">
+              </div>
+            </form>
+          </div>
+          <div class="derivation" id="q2" hidden>
+            <form>
+              <div>
+                <p style="font-style: bold; font-size:large">
+                  Text for question 2.</p>
+                  <input type="radio" name="a2" value="50" >
+                  <label for="q1a1">Answer 1</label>
+                  <br>
+                  <input type="radio" name="a2" value="0">
+                  <label for="q1a2">Answer 2</label>
+                  <br>
+                  <input type="radio" name="a2" value="0">
+                  <label for="q1a3">Answer 3</label>
+                  <br>
+                  <br>
+                  <input type="submit" id="sub1" value="Submit" onclick="showQ1SolutionButton()">
+                </div>
+              </form>
+            </div>
+            <p id="grade"></p>
+            <button onclick="showQ1Solution()" id="q1SolutionButton" style="display:none;">Show solution</button>
+            <div id="q1Solution" style="display:none;">
+              <h5 style="font-style: bold; font-size: 30px;">Solution</h5>
+              <p>Using the unit displacement method:</p>
+              <p>Consider $r_1=1$ and $r_2=0$:</p>
+              <p>The bar forces are:</p>
+              $N_{12}=\frac{EA}{l}, \; N_{13}=\frac{EA}{\sqrt{2}l}, \; N_{14}=-\frac{EA}{\sqrt{2}l}, \; N_{12}=-\frac{EA}{l}$
+              <p>Equilibrium of the horizontal and vertical forces leads to: </p>
+              $R_1=(2+\frac{1}{2}+\frac{1}{2})\frac{EA}{l}=3, \; R_2=0$
+              <p>This is the first column of the stiffness matrix.</p>
+              <p>Now consider $r_1=0$ and $r_2=1$:</p>
+              <p>The bar forces are:</p>
+              $N_{12}=N_{15}=0, \; N_{13}=N_{14}=-\frac{EA}{\sqrt{2}l}$
+              <p>Equilibrium of the horizontal and vertial forces leads to:</p>
+              $R_1=0, \; R_2=\frac{EA}{l}$
+              <p>This is the second column of the stiffness matrix.</p>
+              <p>Thus, the stiffness matric is:</p>
+              $\textbf{$K$}= \frac{EA}{l}	\begin{bmatrix}3&0\\0&1\end{bmatrix}$
+            </div>
+          </div>
+        </div>
+        </body>
+        </html>

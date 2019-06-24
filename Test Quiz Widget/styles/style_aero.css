@@ -1,0 +1,44 @@
+/* Seperate CSS file for the prototype of aero interactive visualization
+Just in case not to mess up with the actual CSS */
+
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+html,body{
+    font-family:"Fira Sans",sans-serif;
+    margin:0 auto;
+    background-color: #ced3db;
+}
+
+body.no-nav::after{
+  content: "";
+  display: none;
+}
+/* AERO NEW CHANGES*/
+#Banner {
+  background-color: rgb(56 133 193);
+  border-bottom: 1px solid #466995;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.introtext{
+  background-color: #DBE9EE;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: justify;
+  width: 100%;
+  position: relative;
+  top: 20px;
+}
+
+.intro-video{
+  box-sizing: border-box;
+  padding: 10px;
+  z-index: 11;
+}
+
+.quiz{
+  margin-bottom: 40px;
+}
