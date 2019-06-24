@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+  <title>Mode Shape</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-1.47.4.min.js"></script>
+  <!--
+  <script src="http://www.numericjs.com/lib/numeric-1.2.6.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  -->
+</head>
+<body>
+
+  <h2 style="text-align: center">3D</h2>
+  <div id="graph3D"></div>
+
+  <div class="row">
+    <div class="one-half column">
+      <div style="text-align: center; margin: 0 auto;">
+        <input type="button" class="button" value="Start" id="start"><br>
+        <strong>Speed: </strong><span id="speedDisplay">500</span><br>
+      <span class="sliderMin">Slower</span>
+      <input
+      id="speedInput"
+      style="width: 60%"
+      class="inputs"
+      type="range"
+      value="500"
+      min="25"
+      max="500"
+      step="5"/>
+      <span class="sliderMax">Slow</span>
+      </div>
+    </div>
+    <div class="one-half column">
+      <div style="text-align: center; margin: 0 auto;">
+        <strong>Mode Shape:</strong>
+        <select id="modeInput">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+        </select>
+      </div>
+      <div style="text-align: center; margin: 0 auto;"><strong>
+          Eigenvalue (undamped natural frequency) :
+      </strong><br>
+      <span id="eigenvalue">98.33</span> rad/s
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="one-half column">
+      <h2 style="text-align: center">Lateral</h2>
+      <div id="graphLat"></div>
+    </div>
+    <div class="one-half column">
+      <h2 style="text-align: center">Longitudinal</h2>
+      <div id="graphLong"></div>
+    </div>
+  </div>
+
+  <!--script for animation-->
+  <script src="animation.js"></script>
+
+</body>
+</html>
