@@ -29,6 +29,7 @@ document.getElementById("speedInput").oninput = function() {
 var yLat = [0,0,0,0,0];
 var yLong = [0,0,0,0,0];
 
+//
 let line3DLat = {
   type: 'scatter3d',
   x: [x[0],x[1],x[2],x[3],x[4]],
