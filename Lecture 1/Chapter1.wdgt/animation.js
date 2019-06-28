@@ -76,6 +76,8 @@ function refreshLayout () {
       t: 50,
       pad: 4
     },
+    plot_bgcolor:"#F4F4F4",
+    paper_bgcolor:"#F4F4F4",
     xaxis: {
       range: [-1,11],
       showgrid: false,
